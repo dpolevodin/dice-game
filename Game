@@ -1,0 +1,29 @@
+import random
+import time
+
+print ("Привет, Друг, напиши свое имя:")
+Name = input('Задайте ваше имя: ')
+To_repeat = "Сыграем еще разок? Введи 'да', если согласен или 'нет', если не готов больше проигрывать"
+print ("Рад знакомству, ", Name, ", давай сыграем в игру. Бросаем кубик по очереди. Выигрывает тот, у кого выпадет большее число от 1 до 6")
+
+Repeat_Game = 1
+while Repeat_Game == 1:
+    print ("Твой бросок - первый. Нажми 'Enter', как будешь готов бросить кубик")
+    Roll = input ()
+    Roll_user = random.randint(1,6)
+    time.sleep(2)
+    print ("У тебя на кубике выпало - ", Roll_user, ". Теперь мой бросок...")
+    Roll_admin = random.randint(1,6)
+    time.sleep(3)
+    print ("У меня выпало - ", Roll_admin)
+    time.sleep(2)
+    if Roll_user > Roll_admin:
+        print ("Поздравляю , ", Name, "!, Победа за тобой! :)", To_repeat)
+    elif Roll_user < Roll_admin:
+            print ("Ахах, сегодня удача мне благоволит, я победил!!!", To_repeat)
+    else: print ("Кажется у нас - ничья...", To_repeat)
+    Repeat_Game2 = input ('Введите ответ: ')
+    if Repeat_Game2 == 'нет':
+        print ("Было приятно с тобой играть! Еще увидимся ;)")
+        break
+    else: continue
