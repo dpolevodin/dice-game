@@ -24,6 +24,6 @@ while Repeat_Game == 1:
     else: print ("Кажется у нас - ничья...", To_repeat)
     Repeat_Game2 = input ('Введите ответ: ')
     if Repeat_Game2 == 'нет':
-        print ("Было приятно с тобой играть! Еще увидимся ;)")
+        print ("Было приятно с тобой играть! Надеюсь, еще увидимся ;)")
         break
     else: continue
